@@ -137,11 +137,11 @@ set.seed(1)
 n <- 200
 x1 = rnorm(n); x2 = rnorm(n)
 tmpdata = data.frame(x1 = x1, x2 = x2, y = rnorm(n) + x1 + 2*x2)
-modbinning <- ormBD(y ~ x1 + x2, data = tmpdata, family = loglog,
+modbinning <- ormBD(y ~ x1 + x2, data = tmpdata, family = "loglog",
                      approach = "binning", target_num = 100)
-## modrounding <- ormBD(y ~ x1 + x2, data = tmpdata, family = loglog,
+## modrounding <- ormBD(y ~ x1 + x2, data = tmpdata, family = "loglog",
 ##                     approach = "rounding", target_num = 100)
-## moddivcomb <- ormBD(y ~ x1 + x2, data = tmpdata, family = loglog,
+## moddivcomb <- ormBD(y ~ x1 + x2, data = tmpdata, family = "loglog",
 ##                     approach = "divide-combine", target_num = 100)
 
 }
